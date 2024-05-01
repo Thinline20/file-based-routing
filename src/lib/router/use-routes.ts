@@ -4,12 +4,12 @@ import swagger from "@elysiajs/swagger";
 
 export const baseElysia = new Elysia().use(swagger()).use(html());
 
-export function useRoute(elysia: typeof baseElysia, routes: Elysia[]) {
+export function useRoutes(elysia: typeof baseElysia, routes: Elysia[]) {
   if (routes.length === 0) {
     return elysia;
   }
 
   const newRoute = routes.shift();
 
-  return useRoute(elysia.use(newRoute!), routes);
+  return useRoutes(elysia.use(newRoute!), routes);
 }

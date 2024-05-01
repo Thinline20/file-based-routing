@@ -4,6 +4,7 @@ export default () => {
       <h1>Home</h1>
       <p>Welcome to your new Elysia site.</p>
       <p>Now go build something great.</p>
+      <p>Hello</p>
     </div>
   );
 };
